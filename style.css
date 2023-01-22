@@ -1,0 +1,282 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: url(./multimedia/image/id_nature.jpg);
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+#capital{
+    text-transform: uppercase;
+}
+.landing-page{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 40vh;
+    /* background: #e4e4e4; */
+}
+.loading{
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 45vh;
+    text-align: center;
+    /* background: #fff; */
+}
+.loading p{
+    font-size: 25px;
+    margin-bottom: 3vh;
+    color: #fff;
+}
+.loading a{
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 7px;
+    background: #fff;
+    color: #000;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.landing-page p{
+    color:#fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:50px ;
+}
+.landing-page a{
+    background: #fff;
+    width: 8%;
+    margin: 10px auto 0 auto;
+    padding: 6px;
+    border-radius: 7px;
+    color: #000;
+    text-decoration: none;
+}
+
+.container{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+/* ----------------------------- START KOLOM INPUT -----------------------------*/
+.left-side{
+    background: rgba(255, 255, 255, 0.9);
+    width: 47%;
+    border-radius: 25px;
+}
+.title{
+    background:#afafaf70;
+    border-radius: 10px;
+    margin: 2vh 2vh 3.3vh 2vh;
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+}
+.form-ktp{
+    /* background:rgb(255, 255, 255); */
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.form-ktp form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.form-ktp form .baris{
+    position: relative;
+    border-bottom: 1.5px solid #a7a7a7;
+    margin: 10px 0;
+    margin-left: 1%;
+    width: 45%;
+}
+.form-ktp form .baris input,
+.form-ktp form .baris select{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    /* background: #2691d9; */
+}
+/* .form-ktp form .baris select{
+    width: ;
+} */
+/* .baris select{
+    height: 10px;
+    overflow: scroll;
+} */
+.baris label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-35%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.baris span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+.baris input:focus ~ label,
+.baris input:valid ~ label{
+  top: -5px;
+  color: #2691d9;
+}
+.baris select:focus ~ label,
+.baris select:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+/* .baris input:focus ~ span::before,
+.baris input:valid ~ span::before,
+.baris select:focus ~ span::before,
+.baris select:valid ~ span::before{
+  width: 100%;
+} */
+
+
+/* ----------------------------- END KOLOM INPUT -----------------------------*/
+
+/* ----------------------------- START KOLOM OUTPUT -----------------------------*/
+.right-side{
+    background: rgba(255, 255, 255, 0.900);
+    width: 45%;
+    border-radius: 25px;
+}
+.depan{
+    /* background: #fff; */
+    width: 90%;
+    height: 55vh;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.depan .cover{
+    /* original */
+    background-image: url(./multimedia/image/ktp-back.png);
+    background-repeat: no-repeat;
+    background-size:100% 100% ;
+    border-radius: 25px;
+    height:50vh;
+    /* --------------------------- */
+    position: absolute;
+    width: 40.5%;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform 0.4s ease-out;
+}
+.header .header-sejajar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.space{
+    color: hsla(0, 0%, 100%, 0);
+}
+.content{
+    margin: 2%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.content .left-content-ktp{
+    width: 60%;
+}
+.content .right-content-ktp{
+    width: 30%;
+    /* background: #fff; */
+    overflow: hidden;
+}
+.btn input{
+    color: rgba(255, 255, 255, 0);
+    margin-left: 39%;
+}
+.content .left-content-ktp .sejajar{
+    display: flex;
+    flex-direction: row;
+    /* border-bottom: 2px solid #ff0000; */
+    margin-left: 1%;
+}
+.content .left-content-ktp .sejajar .titikdua{
+    margin-left: 22%;
+    position: absolute;
+}
+.content .left-content-ktp .sejajar div{
+    margin-left:25%;
+    position: absolute;
+}
+
+
+.depan .back{
+    /* original */
+    background-image: url(./multimedia/image/ktp-front.png);
+    background-repeat: no-repeat;
+    background-size:100% 100% ;
+    border-radius: 25px;
+    height:50vh;
+    /* --------------------------- */
+    position: absolute;
+    width: 40.5%;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+/* ----------------------------- END KOLOM OUPUT -----------------------------*/
+
+.navigasi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* background: #2691d9; */
+    margin-top: 100px;
+    
+}
+.navigasi a{
+    background:#afafaf70;
+    width: 15%;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    border-radius: 7px;
+    color: rgb(0, 0, 0);
+}
+.navigasi h3{
+    background: #da0e0e6e;
+    width: 35%;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+
+
+
+
+
+
+
+
